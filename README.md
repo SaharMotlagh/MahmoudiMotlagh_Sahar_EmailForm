@@ -28,8 +28,6 @@ git commit -m ' your updating goes hear'
 git push origin dev.yourname.yourtask
 I'll cheack on your files and then merge it.
 
-## History
-TODO: Write history
 ## Credits
 Sahar MahmoudiMotlagh 
 Enjoy!!
