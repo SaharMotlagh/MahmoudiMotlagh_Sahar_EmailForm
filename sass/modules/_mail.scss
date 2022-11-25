@@ -66,6 +66,22 @@ input[type=submit] {
     }
 } 
 
+.submit-wrapper {
+    display: flex;
+    float: right;
+    margin-top: 2em;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    background-color: #78abeb;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .submit-wrapper span {
+    padding-right: 0;
+  }
+
 
 textarea { resize: none;
     
