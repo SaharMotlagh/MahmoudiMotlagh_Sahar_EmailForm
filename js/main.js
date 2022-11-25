@@ -12,7 +12,17 @@ import { SendMail } from "./components/mailer.js";
 
         methods: {
             processMailFailure(result) {
-                let fields = JSON.parse(result.message);
+                
+                //let message = '{"result":true}';
+
+                let message = JSON.parse(result.message);
+                //console.log(result);
+                //return value;
+
+               
+
+                //console.log(message.count);
+                console.log(message.result);
                 // show a failure message in the UI
                 // use this.$refs to connect to the elements on the page and mark any empty fields/inputs with an error class
                 //alert('failure! and if you keep using an alert, DOUBLE failure!');        
@@ -34,7 +44,7 @@ import { SendMail } from "./components/mailer.js";
 
 
 
-            processMailSuccess(result) {
+            processMailSuccess(result) 
 
                 result.forEach(field => {
                     this.$refs[field].classList.add('sucess');
