@@ -4,6 +4,23 @@ import { SendMail } from "./components/mailer.js";
     const { createApp } = Vue
 
     createApp({
+        //created() {
+           //fetch('./includes/send.php')
+            //.then(res => res.json())
+           // .then(data => this.sendData = data)
+           //.catch(error => console.error(error)); 
+
+       //},
+
+        //data() {
+            //return {
+                //sendData: {},
+                //LbData: {},
+                //showLB: false
+           // }
+       // },
+        
+
         data() {
             return {
                 message: 'Hello Vue!'
@@ -16,7 +33,7 @@ import { SendMail } from "./components/mailer.js";
                 //let message = '{"result":true}';
 
                 let message = JSON.parse(result.message);
-                //console.log(result);
+                console.log(result);
                 //return value;
 
                
@@ -53,7 +70,7 @@ import { SendMail } from "./components/mailer.js";
 
                 let errorPopper = document.querySelector('.alart-container');
 
-                errorPopper.textContent = 'Please fill out the form';
+                errorPopper.textContent = 'message has sent!';
 
                 errorPopper.classList.add('showme');
 
