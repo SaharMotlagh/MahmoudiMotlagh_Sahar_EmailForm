@@ -6,9 +6,9 @@ header("Content-Type: application/json; charset=UTF-8");
 if ($_POST) {
     $recipient = "sahar.motlaq.m@gmail.com";
     $subject = 'Message from sahar-motlagh.com';
-    $visitor_name = "";
-    $visitor_email = "";
-    $message = "";
+    $visitor_name         = "";
+    $visitor_email        = "";
+    $message      = "";
     $fail = array();
 
     if (isset($_POST['firstname']) && !empty($_POST['firstname'])) {
@@ -36,7 +36,9 @@ if ($_POST) {
         array_push($fail, "message");
     }
 
-    $headers = "From: " .$visitor_email. "\r\n" . "Reply-To: " .$visitor_email. "\r\n" ."X-Mailer: PHP/" .phpversion();
+    $headers = 'From: $visitor_email' . "\r\n" .
+        'Reply-To: $visitor_email' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
     
     if (count($fail)==0) {
         mail($recipient, $subject, $message, $headers);
